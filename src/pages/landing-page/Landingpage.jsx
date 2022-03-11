@@ -97,30 +97,32 @@ function Landingpage() {
             <div className="landingPage__sideBar">
                 <div className="header">
                     <img src="/logo.png" alt="" />
-                    <p className="gradient__text">Lighthouse</p>
+                    <p className="gradient__text">Origami</p>
                 </div>
                 <div className="title">
                     <p>
-                        Your Personal <br /> <span className="gradient__text">Web 3.0</span>{" "}
-                        storage
-                        <br /> in <span className="gradient__text">Metaverse</span>
+                        Your Slogan <br /> <span className="gradient__text">Here</span>{" "}
+                        Create
+                        <br /> for the <span className="gradient__text">Metaverse</span>
                     </p>
 
                     <div className="icons">
-                        <a href="https://discord.com/invite/c4a4CGCdJG" target="_blank" rel="noreferrer"> <BsDiscord /></a>
-                        <a href="https://twitter.com/lighthouseweb3" target="_blank" rel="noreferrer"> <BsTwitter /></a>
+                        <a href="#" target="_blank" rel="noreferrer"> <BsDiscord /></a>
+                        <a href="#" target="_blank" rel="noreferrer"> <BsTwitter /></a>
                     </div>
                 </div>
                 <div className="footer">
                     <div className="footer__heading">
-                        Supported Chains:
+                    <div class="circle"></div> Live on:
                     </div>
 
                     <div className="footer__chains">
                         <img src="/chain_icons/binance.png" alt="binanceLogo" />
                         <img src="/chain_icons/polygon.png" alt="polygonLogo" />
+                        {/*
                         <img src="/chain_icons/fantom.png" alt="fantomLogo" />
                         <img src="/chain_icons/optimism.svg" alt="optimismLogo" />
+                        */}
                     </div>
 
                 </div>

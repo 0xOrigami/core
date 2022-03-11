@@ -8,8 +8,11 @@ import store from "./store/store";
 import { ToastContainer } from "react-toastify";
 import { MoralisProvider } from "react-moralis";
 
-let appIdmoralis = process.env.appId;
-let serverUrlmoralis = process.env.serverUrl;
+// let appIdmoralis = process.env.appId;
+// let serverUrlmoralis = process.env.serverUrl;
+
+let appIdmoralis = 'EVHH0yjJ8wvbQDugIgQMuf4ioYfUHmjnUdt71AdB';
+let serverUrlmoralis = 'https://ywodlfouo6d6.usemoralis.com:2053/server';
 
 ReactDOM.render(
   <MoralisProvider
