@@ -9,11 +9,11 @@ import {
     SidebarFooter,
 } from "react-pro-sidebar";
 
-import { AiOutlinePlus, AiOutlineGateway } from 'react-icons/ai';
-import { MdFolderShared } from 'react-icons/md';
+import { AiOutlinePlus, AiOutlineGateway, AiOutlineCloudServer, AiOutlineDeploymentUnit } from 'react-icons/ai';
+import { MdFolderShared, MdBubbleChart, MdSchool, MdOutlineSettings, MdOutlineSettingsAccessibility } from 'react-icons/md';
 import { BiLogOut } from 'react-icons/bi';
 import { HiOutlineDocument } from 'react-icons/hi';
-import { BsCollection } from 'react-icons/bs';
+import { BsCollection, BsShopWindow, BsBadge3D } from 'react-icons/bs';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -50,24 +50,30 @@ function Sidebar() {
         <ProSidebar collapsed={false}>
             <SidebarHeader>
                 <Menu iconShape="round">
-                    <MenuItem icon={<AiOutlinePlus />} active={false}
-                    >Add New  <Link to='/dashboard/uploadNew' /></MenuItem>
+                    <MenuItem icon={<BsBadge3D />} active={true}
+                    >Upload 3D Scan  <Link to='/dashboard/uploadNew' /></MenuItem>
+                    <MenuItem icon={<AiOutlineDeploymentUnit />} active={false}
+                    >Mint 3D NFT  <Link to='/dashboard/mintNFT' /></MenuItem>
                 </Menu>
             </SidebarHeader>
             <Menu iconShape="round">
-                <MenuItem icon={<MdFolderShared />} active={currentPage === '/dashboard' ? true : false}
+                <MenuItem icon={<MdFolderShared />} active={false}
                 >Dashboard <Link to='/dashboard' /></MenuItem>
-                <MenuItem icon={<BsCollection />} active={currentPage === '/dashboard/collection' ? true : false}
-                >Collection <Link to='collection' /></MenuItem>
-                <MenuItem icon={<AiOutlineGateway />} active={currentPage === '/dashboard/gateway' ? true : false}
-                >Gateway <Link to='gateway' /></MenuItem>
-                <MenuItem icon={<HiOutlineDocument />} active={currentPage === '/dashboard/mintNFT' ? true : false}
-                >Mint NFT <Link to='mintNFT' /></MenuItem>
+                <MenuItem icon={<MdSchool />} active={false}
+                >Education <Link to='collection' /></MenuItem>
+                <MenuItem icon={<BsShopWindow />} active={false}
+                >Marketplace <Link to='gateway' /></MenuItem>
+                <MenuItem icon={<MdBubbleChart />} active={currentPage === '/dashboard/room' ? true : false}
+                >My Metaverse <Link to='room' /></MenuItem>
             </Menu>
             <SidebarContent>
             </SidebarContent>
             <SidebarFooter>
                 <Menu iconShape="round">
+                    <MenuItem icon={<MdOutlineSettingsAccessibility />} active={false}
+                    >Account <Link to='account' /></MenuItem>
+                    <MenuItem icon={<MdOutlineSettings />} active={false}
+                    >Settings <Link to='settings' /></MenuItem>
                     <MenuItem icon={<BiLogOut />} active={false}
                         onClick={() => { logout(_auth, _navigate) }}
                     >Logout</MenuItem>

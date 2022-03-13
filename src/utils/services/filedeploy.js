@@ -21,6 +21,25 @@ export const sign_message = async () => {
   };
 };
 
+export const mint = async (
+  cid,
+  fileName,
+  fileSize,
+  cost,
+  network
+) => {
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  // console.log(network);
+  const contract_address = '0x801206f0db68A8CBaEdCCe1346127331E326dBE5';
+
+  const signer = provider.getSigner();
+  const contract = new ethers.Contract(contract_address, lighthouseAbi, signer);
+  const txResponse = await contract.store(cid, "", fileName, fileSize, {
+    value: ethers.utils.parseEther(cost),
+  });
+  return txResponse;
+};
+
 export const execute_transaction = async (
   cid,
   fileName,

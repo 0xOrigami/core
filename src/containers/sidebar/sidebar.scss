@@ -6,7 +6,7 @@
 .pro-sidebar-header{
     .pro-menu-item{
         background: var(--primary-blue);
-        color: white;
+        color: var(--background-black);;
     }
 }
 
@@ -28,6 +28,6 @@
 }
 
 .pro-menu-item.active {
-    background: rgba(73, 73, 73, 1);
-    color: white;
+    background: var(--primary-red);
+    color: var(--background-black) !important;
 }

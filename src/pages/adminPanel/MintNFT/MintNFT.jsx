@@ -3,28 +3,34 @@ import './MintNFT.scss'
 import Dropzone from '../../../components/dropzone'
 import Overlay from '../../../containers/Overlay/Overlay'
 
+import { sign_message, mint } from "../../../utils/services/filedeploy";
+
 function MintNFT() {
+
+    function clickMint(input){
+        // sign_message()
+        mint('QmQ9MJfRRyXUgFHkFYc5SzaF1MJ497D9ZDT5UYxgWvzuPg', 'origami.glb', 12345, "1", 8001)
+    }
+
     return (
         <div className="mintNFT">
-            <Overlay />
+            {false?<Overlay />:null}
             <div className="mintNFT__title">
                 <p>Mint NFT</p>
             </div>
             <div className="mintNFT__content">
-                <p>Images, Videos, Audio or 3D Model <br /> <small>File types supported: JPG, PNG, GIF, SVG, MP4, WEBM, MP3, WAV, OGG, GLB, GLTF. Max size: 100 MB</small></p>
+                <p>Preview Image <br /> <small>: PNG, JPEG, GIF. Max size: 4 MB</small></p>
 
                 <Dropzone />
 
                 <div className="fieldContainer">
-                    <div className="fieldContainer__title">Name</div>
-                    <input type="text" placeholder='Item Name' />
+                    <div className="fieldContainer__cid">Object CID</div>
+                    <input type="text" placeholder='Paste your CID' />
                 </div>
                 <div className="fieldContainer">
-                    <div className="fieldContainer__title">External Link</div>
-                    <div className="fieldContainer__information">Lighthouse will include a link to this URL on this item’s detail page, so that user can click to learn more about it. You are welcome to link to your own webpage with more details.</div>
-                    <input type="text" placeholder='www.yoursite.com/file123' />
+                    <div className="fieldContainer__title">Object Name</div>
+                    <input type="text" placeholder='Item Name' />
                 </div>
-
                 <div className="fieldContainer">
                     <div className="fieldContainer__title">Description</div>
                     <div className="fieldContainer__information">
@@ -33,8 +39,7 @@ function MintNFT() {
                     <textarea placeholder='Description here'></textarea>
                 </div>
 
-
-
+                <button className="fileBtn ptr" onClick={() => { clickMint('mint') }}>Mint </button>
 
             </div>
         </div>

@@ -10,7 +10,7 @@ function Header() {
         <div className="header">
             <div className="header__logoBox">
                 <img src="/logo.png" alt="" />
-                <p className='gradient__text'>Lighthouse</p>
+                <p className='gradient__text'>Origami</p>
             </div>
             <div className="header__infoBox">
                 <CgProfile />&nbsp;

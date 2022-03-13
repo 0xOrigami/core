@@ -101,9 +101,8 @@ function Landingpage() {
                 </div>
                 <div className="title">
                     <p>
-                        Your Slogan <br /> <span className="gradient__text">Here</span>{" "}
-                        Create
-                        <br /> for the <span className="gradient__text">Metaverse</span>
+                        A <span className="gradient__text_">3D Model</span>{" "}
+                        <br />Platform for <span className="gradient__text_">Everyone</span>
                     </p>
 
                     <div className="icons">
@@ -132,7 +131,7 @@ function Landingpage() {
 
                 <div className="landingPage__loginBar_iconsContainer">
                     <div className="loginBox ptr" onClick={() => sign_message(setUserAddress)}>
-                        <img src="/icons/metamask.png" alt="metamaskIcon" />
+                        <img src="/icon/metamask.png" alt="metamaskIcon" />
                         <p className="m-1">Metamask</p>
                     </div>
                     {/* <div className="loginBox ptr" onClick={goToDashboard}>

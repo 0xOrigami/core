@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Progress from "react-progressbar";
 import UploadCID from "../../../components/uploadCID/UploadCID";
 
-import { sign_message, execute_transaction, uploadFile, uploadFolder } from "../../../utils/services/filedeploy";
+import { sign_message, execute_transaction, uploadFile, uploadFolder, mint } from "../../../utils/services/filedeploy";
 import { notify } from "../../../utils/services/notification";
 import UploadFile from "../../../components/uploadFile/UploadFile";
 
@@ -46,11 +46,10 @@ function UploadNew() {
         <div className="uploadNew">
             <div className="uploadNew__top">
                 <div className="uploadNew__title">
-                    <p>Upload New</p>
+                    <p>Upload New 3D Scan</p>
                 </div>
                 <div className="uploadNew__content">
-                    <UploadCID setUploadProgress={setUploadProgress} sign_message={sign_message} execute_transaction={execute_transaction} notify={notify} />
-                    <hr />
+                    <p>Upload a new 3D Scan to get started!</p>
                     <div className="upload_file">
                         <UploadFile setUploadedFiles={setUploadedFiles} setUploadedFolder={setUploadedFolder} />
                     </div>
